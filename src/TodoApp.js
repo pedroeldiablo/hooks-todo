@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Paper, AppBar, Toolbar, Typography } from '@material-ui/core';
+import { Paper, AppBar, Toolbar, Typography, Grid } from '@material-ui/core';
 import TodoList from './TodoList';
 import TodoForm from './TodoForm';
 
 const initialTodos = [
     {id: 1, task:"Learn react hooks", completed: false},
-    {id: 2, task:"Lose weight", completed: false},
+    {id: 2, task:"Lose weight", completed: true},
     {id: 3, task:"Get buff", completed: false},
 
 ]
@@ -30,8 +30,12 @@ function TodoApp() {
                     <Typography color='inherit'>TODOS WITH HOOKS</Typography>
                 </Toolbar>
             </AppBar>
-            <TodoForm addTodo={addTodo}/>
-            <TodoList todos={todos} />
+            <Grid container justify="center" style={{ marginTop: "1rem"}} >
+                <Grid item xs={11} md={8} lg={4} > 
+                <TodoForm addTodo={addTodo}/>
+                <TodoList todos={todos} />
+                </Grid>     
+            </Grid>
 
         </Paper>
     );
