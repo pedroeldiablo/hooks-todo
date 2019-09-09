@@ -9,7 +9,7 @@ import EditIcon from '@material-ui/icons/Edit';
  function Todo({id, task, completed, removeTodo, toggleTodoComplete, editTodo}) {
     const [isEditing, toggleIsEditing] = useToggleState();
     return (
-        <ListItem>
+        <ListItem style={{ height:"64px"}}>
             {isEditing ? 
             <EditTodoForm 
             editTodo={editTodo} 
