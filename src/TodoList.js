@@ -2,7 +2,7 @@ import React from 'react'
 import { Paper, List, ListItem, ListItemText, Divider } from '@material-ui/core';
 import Todo from './Todo';
 
-function TodoList({ todos, removeTodo, toggleTodoComplete }) {
+function TodoList({ todos, removeTodo, editTodo, toggleTodoComplete }) {
     return (
         <Paper>
             <List>
@@ -15,6 +15,7 @@ function TodoList({ todos, removeTodo, toggleTodoComplete }) {
                 completed={todo.completed}
                 removeTodo={removeTodo}
                 toggleTodoComplete={toggleTodoComplete}
+                editTodo={editTodo}
                 />
                 <Divider />
                 </>
