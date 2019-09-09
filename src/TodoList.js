@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paper, List, ListItem, ListItemText, Divider } from '@material-ui/core';
+import { Paper, List, Divider } from '@material-ui/core';
 import Todo from './Todo';
 
 function TodoList({ todos, removeTodo, editTodo, toggleTodoComplete }) {
