@@ -1,12 +1,12 @@
+import { AppBar, Grid, Paper, Toolbar, Typography } from '@material-ui/core';
 import React from 'react';
 import useTodosState from './hooks/useTodosState';
-
-import { Paper, AppBar, Toolbar, Typography, Grid } from '@material-ui/core';
-import TodoList from './TodoList';
 import TodoForm from './TodoForm';
+import TodoList from './TodoList';
+
 
 function TodoApp() {
-    const initialTodos = [{ id:1, task:"Pet a monkey", completed:false}]
+    const initialTodos = [{ id:1201, task:"Pet a monkey", completed:false}]
     const {todos,  addTodo, removeTodo, toggleTodoComplete, editTodo} = useTodosState(initialTodos)
 
 

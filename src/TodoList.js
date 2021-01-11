@@ -1,5 +1,5 @@
-import React from 'react'
-import { Paper, List, Divider } from '@material-ui/core';
+import { List, Paper } from '@material-ui/core';
+import React from 'react';
 import Todo from './Todo';
 
 function TodoList({ todos, removeTodo, editTodo, toggleTodoComplete }) {
@@ -8,21 +8,16 @@ function TodoList({ todos, removeTodo, editTodo, toggleTodoComplete }) {
         <Paper>
             <List>
             {todos.map((todo, i )=> (
-                <>
                 <Todo 
                  {...todo}
-                key={todo.id} 
+                dataKey={i} 
+                key={i} 
                 removeTodo={removeTodo}
                 toggleTodoComplete={toggleTodoComplete}
                 editTodo={editTodo}
                 />
-                {i < todos.length -1 && <Divider />  }
-                </>
             ))}
-
-            </List>
-            
-            
+            </List> 
         </Paper>
     )
     return null;
